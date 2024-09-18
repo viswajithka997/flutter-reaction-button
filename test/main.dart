@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
               10,
               (index) {
                 return ReactionButton(
+                  controllerOntap: () {},
                   toggle: toggle,
                   onReactionChanged: (reaction) {},
                   reactions: _reactions,

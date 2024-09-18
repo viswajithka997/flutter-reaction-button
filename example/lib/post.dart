@@ -40,6 +40,7 @@ class PostWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ReactionButton<String>(
+                    controllerOntap: () {},
                     itemSize: const Size.square(40),
                     onReactionChanged: (Reaction<String>? reaction) {
                       debugPrint('Selected value: ${reaction?.value}');

@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
                 return SizedBox.square(
                   dimension: 30,
                   child: ReactionButton<String>(
+                    controllerOntap: () {},
                     toggle: false,
                     direction: ReactionsBoxAlignment.rtl,
                     onReactionChanged: (Reaction<String>? reaction) {

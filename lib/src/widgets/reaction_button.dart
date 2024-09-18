@@ -26,6 +26,7 @@ class ReactionButton<T> extends StatefulWidget {
     this.hoverDuration = const Duration(milliseconds: 400),
     this.child,
     this.direction = ReactionsBoxAlignment.ltr,
+    required this.controllerOntap,
   }) : _type = child != null ? ReactionType.container : ReactionType.button;
 
   /// This triggers when reaction button value changed.
@@ -80,6 +81,7 @@ class ReactionButton<T> extends StatefulWidget {
   final ReactionsBoxAlignment direction;
 
   final ReactionType _type;
+  final VoidCallback controllerOntap;
 
   @override
   State<ReactionButton<T>> createState() => _ReactionButtonState<T>();
@@ -171,6 +173,7 @@ class _ReactionButtonState<T> extends State<ReactionButton<T>> {
           _onCheck();
         } else {
           _onShowReactionsBox();
+          widget.controllerOntap;
         }
       },
       onLongPressStart: (details) {
