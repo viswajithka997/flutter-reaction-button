@@ -173,7 +173,7 @@ class _ReactionButtonState<T> extends State<ReactionButton<T>> {
           _onCheck();
         } else {
           _onShowReactionsBox();
-          widget.controllerOntap;
+          widget.controllerOntap();
         }
       },
       onLongPressStart: (details) {
