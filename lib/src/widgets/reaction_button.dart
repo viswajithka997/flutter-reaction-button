@@ -138,6 +138,7 @@ class _ReactionButtonState<T> extends State<ReactionButton<T>> {
             _disposeOverlayEntry();
           },
           onClose: () {
+            widget.controllerOntap();
             _disposeOverlayEntry();
           },
         );
