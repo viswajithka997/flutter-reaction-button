@@ -27,6 +27,7 @@ class ReactionButton<T> extends StatefulWidget {
     this.child,
     this.direction = ReactionsBoxAlignment.ltr,
     required this.controllerOntap,
+    required this.disposeFn,
   }) : _type = child != null ? ReactionType.container : ReactionType.button;
 
   /// This triggers when reaction button value changed.
@@ -81,7 +82,10 @@ class ReactionButton<T> extends StatefulWidget {
   final ReactionsBoxAlignment direction;
 
   final ReactionType _type;
+
   final VoidCallback controllerOntap;
+
+  final VoidCallback disposeFn;
 
   @override
   State<ReactionButton<T>> createState() => _ReactionButtonState<T>();
@@ -138,7 +142,7 @@ class _ReactionButtonState<T> extends State<ReactionButton<T>> {
             _disposeOverlayEntry();
           },
           onClose: () {
-            widget.controllerOntap();
+            widget.disposeFn();
             _disposeOverlayEntry();
           },
         );

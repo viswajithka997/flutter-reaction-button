@@ -40,6 +40,7 @@ class _ImageWidgetState extends State<ImageWidget> {
               ),
               child: ReactionButton<String>(
                 controllerOntap: () {},
+                disposeFn: () {},
                 onReactionChanged: (Reaction<String>? reaction) {
                   setState(() {
                     _selectedReaction = reaction;
